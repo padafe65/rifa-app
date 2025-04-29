@@ -94,13 +94,13 @@
                 borderRadius: '8px',
                 marginBottom: '10px',
               }}
-            />
+            /> <h3><p style={{color:'blue', textAlign:'center'}}>para poder participar en la rifa, debes estar registrado y posteriormente iniciar sesión con tu correo y la clave que hayas utilizado en el registro, gracias por participar y colaborarme</p></h3>
           <div  className="overflow-y-auto p-4 rounded-xl mt-3" style={{ maxHeight: '70vh', backgroundColor: '#17a2b8', // cyan-ish fondo     color: '#f8f9fa', // texto beige/blanco claro  fontSize: '1rem',
             WebkitOverflowScrolling: 'touch', touchAction: 'manipulation', color:'whitesmoke'}}>
             <p >
               <lu >
                 <li>
-                  <i><strong style={{ color: 'beige' }}>Bienvenido y gracias por participar en la rifa pro_quimioterapia Erwin (Este elemento de texto informativo es desplazable).</strong></i> 
+                  <i><strong style={{ color: 'beige' }}>Bienvenido y gracias por participar en la rifa pro_quimioterapia Erwin.</strong></i> 
                 </li>
               </lu><br />
               💡
