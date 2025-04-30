@@ -304,7 +304,7 @@
               </tr>
             </thead>
             <tbody>
-              {rifas.map((rifa) => (
+              {rifas.map((rifa) => (                
                 <tr key={rifa.id} style={{ backgroundColor: 'red', color: 'white', fontSize: 16, textAlign: 'center', verticalAlign: 'middle' }}>
                   <td>{rifa.id}</td>
                   <td>{rifa.nombre_usuario || usuario.nombre}</td>
@@ -333,26 +333,25 @@
                     )}
 
                     {rifa.estado === "Cancelado" && rifa.imagen_pago && (
-                      <a href={`${API_URL}/uploads/${rifa.imagen_pago}`} 
+                      <a  href={`${API_URL}/uploads/${rifa.imagen_pago}`} 
                         target="_blank" rel="noopener noreferrer"
                         className="btn btn-info btn-sm">
                         Ver Comprobante                        
                       </a>                      
                     )}
                   </td> 
-                  <td style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    {rifa.imagen_pago ? (
+                  
+                  <td>
+                    {rifa.estado === "Cancelado" && rifa.imagen_pago ? (
                       <img
                         src={`${API_URL}/uploads/${rifa.imagen_pago}`}
                         alt="Comprobante"
-                        width={60}
-                        height={55}
-                        style={{ alignItems: 'center', paddingLeft: 3 }}
+                        style={{ width: '50px', height: '50px', objectFit: 'cover' }}
                       />
                     ) : (
-                      <span style={{ fontSize: '0.8rem', color: 'gray' }}>Sin comprobante</span>
+                      <span className="badge bg-danger">Sin comprobante</span>
                     )}
-                  </td>                 
+                  </td>               
                 </tr>
               ))}
             </tbody>
